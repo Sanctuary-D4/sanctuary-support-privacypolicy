@@ -1,325 +1,805 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Sanctuary Support - Privacy Policy</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanctuary Discord Bots - Privacy Policy</title>
 
-<style>
-:root {
-  --bg: #0b0d12;
-  --panel: #111521;
-  --panel2: #151a28;
-  --text: #e7e9ee;
-  --muted: #9aa4b2;
-  --accent: #5865f2;
-  --border: #23283a;
-}
+    <style>
+        :root {
+            --bg: #0b0d12;
+            --panel: rgba(17, 21, 33, 0.88);
+            --panel2: rgba(21, 26, 40, 0.92);
+            --panel3: rgba(255, 255, 255, 0.035);
+            --text: #e7e9ee;
+            --muted: #9aa4b2;
+            --muted2: #737d8c;
+            --accent: #5865f2;
+            --accent2: #c87932;
+            --danger: #b64a3c;
+            --border: rgba(255, 255, 255, 0.095);
+            --shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+        }
 
-* {
-  box-sizing: border-box;
-}
+        * {
+            box-sizing: border-box;
+        }
 
-body {
-  margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto;
-  background: radial-gradient(circle at top, #151a28 0%, #0b0d12 60%);
-  color: var(--text);
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-/* Layout */
-.wrapper {
-  display: flex;
-}
+        body {
+            margin: 0;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background:
+                radial-gradient(circle at 80% -10%, rgba(200, 121, 50, 0.16), transparent 34%),
+                radial-gradient(circle at 8% 4%, rgba(88, 101, 242, 0.18), transparent 34%),
+                linear-gradient(180deg, #101421 0%, var(--bg) 44%, #080a0f 100%);
+            color: var(--text);
+            min-height: 100vh;
+        }
 
-/* Sidebar (desktop) */
-.sidebar {
-  width: 260px;
-  background: var(--panel);
-  padding: 25px;
-  border-right: 1px solid var(--border);
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+            background-size: 42px 42px;
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.72), transparent 70%);
+        }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 18px;
-  font-weight: 700;
-}
+        a {
+            color: inherit;
+        }
 
-.brand img {
-  width: 26px;
-  height: 26px;
-}
+        .wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
 
-.tag {
-  color: var(--muted);
-  font-size: 12px;
-  margin: 10px 0 20px;
-}
+        .sidebar {
+            width: 280px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 26px;
+            background: rgba(13, 17, 27, 0.84);
+            border-right: 1px solid var(--border);
+            backdrop-filter: blur(18px);
+            overflow-y: auto;
+        }
 
-.nav a {
-  display: block;
-  color: var(--muted);
-  text-decoration: none;
-  padding: 8px 0;
-  font-size: 14px;
-  transition: 0.2s;
-}
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 17px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
 
-.nav a:hover {
-  color: var(--text);
-  transform: translateX(4px);
-}
+        .brand img,
+        .mobile-brand img {
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+        }
 
-/* Main content */
-.main {
-  margin-left: 260px;
-  padding: 50px;
-  width: 100%;
-}
+        .tag {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.5;
+            margin: 11px 0 24px;
+        }
 
-.card {
-  background: linear-gradient(180deg, #151a28 0%, #121621 100%);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 35px;
-  max-width: 900px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-}
+        .nav-label {
+            color: var(--muted2);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 9px;
+        }
 
-.badge {
-  display: inline-block;
-  background: rgba(88,101,242,0.15);
-  color: var(--accent);
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-  border: 1px solid rgba(88,101,242,0.3);
-}
+        .nav a {
+            display: block;
+            color: var(--muted);
+            text-decoration: none;
+            padding: 9px 10px;
+            margin: 3px 0;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: 0.2s ease;
+        }
 
-h1 {
-  margin-top: 12px;
-  font-size: 28px;
-}
+        .nav a:hover {
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.055);
+            transform: translateX(3px);
+        }
 
-.sub {
-  color: var(--muted);
-  margin-bottom: 20px;
-}
+        .sidebar-note {
+            margin-top: 26px;
+            padding: 14px;
+            border: 1px solid rgba(88, 101, 242, 0.24);
+            background: rgba(88, 101, 242, 0.08);
+            border-radius: 14px;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.55;
+        }
 
-h2 {
-  margin-top: 28px;
-  font-size: 16px;
-  border-left: 3px solid var(--accent);
-  padding-left: 10px;
-}
+        .mobile-topbar {
+            display: none;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(13, 17, 27, 0.9);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(18px);
+            padding: 13px 16px;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-p, li {
-  color: var(--muted);
-  font-size: 14px;
-}
+        .mobile-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            font-size: 15px;
+        }
 
-ul {
-  padding-left: 20px;
-}
+        .menu-btn {
+            border: 1px solid var(--border);
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 10px;
+            padding: 8px 11px;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-.footer {
-  margin-top: 25px;
-  font-size: 12px;
-  color: #6b7280;
-  border-top: 1px solid var(--border);
-  padding-top: 15px;
-}
+        .mobile-nav {
+            display: none;
+            position: sticky;
+            top: 57px;
+            z-index: 19;
+            background: rgba(13, 17, 27, 0.96);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(18px);
+            padding: 8px 16px 12px;
+        }
 
-/* Glow */
-.glow {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: var(--accent);
-  filter: blur(140px);
-  opacity: 0.08;
-  top: -100px;
-  right: -100px;
-  z-index: 0;
-}
+        .mobile-nav.open {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+        }
 
-.container {
-  position: relative;
-}
+        .mobile-nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 13px;
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.035);
+        }
 
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
+        .main {
+            width: 100%;
+            margin-left: 280px;
+            padding: 44px;
+        }
 
-.mobile-topbar {
-  display: none;
-  background: var(--panel);
-  padding: 14px 18px;
-  border-bottom: 1px solid var(--border);
-  align-items: center;
-  justify-content: space-between;
-}
+        .container {
+            width: min(1040px, 100%);
+            margin: 0 auto;
+        }
 
-.mobile-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 700;
-}
+        .hero {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background:
+                linear-gradient(135deg, rgba(88, 101, 242, 0.14), rgba(200, 121, 50, 0.10)),
+                rgba(17, 21, 33, 0.78);
+            box-shadow: var(--shadow);
+            border-radius: 24px;
+            padding: 38px;
+            margin-bottom: 20px;
+        }
 
-.mobile-brand img {
-  width: 24px;
-  height: 24px;
-}
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            right: -180px;
+            top: -190px;
+            background: rgba(200, 121, 50, 0.26);
+            filter: blur(80px);
+        }
 
-.menu-btn {
-  background: none;
-  border: none;
-  color: var(--text);
-  font-size: 20px;
-}
+        .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #cfd5ff;
+            background: rgba(88, 101, 242, 0.16);
+            border: 1px solid rgba(88, 101, 242, 0.30);
+            padding: 6px 11px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 700;
+        }
 
-/* Mobile nav */
-.mobile-nav {
-  display: none;
-  flex-direction: column;
-  background: var(--panel);
-  border-bottom: 1px solid var(--border);
-  padding: 10px 18px;
-}
+        h1 {
+            position: relative;
+            margin: 18px 0 12px;
+            font-size: clamp(32px, 5vw, 56px);
+            line-height: 1.02;
+            letter-spacing: -0.055em;
+        }
 
-.mobile-nav a {
-  color: var(--muted);
-  text-decoration: none;
-  padding: 10px 0;
-  font-size: 14px;
-}
+        .hero p {
+            position: relative;
+            max-width: 760px;
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.75;
+            margin: 0;
+        }
 
-/* Breakpoint */
-@media (max-width: 900px) {
+        .meta-row {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
+        }
 
-  .sidebar {
-    display: none;
-  }
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.055);
+            border: 1px solid var(--border);
+            padding: 9px 12px;
+            border-radius: 999px;
+            font-size: 13px;
+        }
 
-  .main {
-    margin-left: 0;
-    padding: 20px;
-  }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+            margin-bottom: 20px;
+        }
 
-  .mobile-topbar {
-    display: flex;
-  }
+        .trust-card,
+        .bot-card,
+        .section {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+        }
 
-  .card {
-    padding: 20px;
-  }
-}
-</style>
+        .trust-card {
+            padding: 18px;
+        }
+
+        .trust-card strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        .trust-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+        .bot-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .bot-card {
+            padding: 22px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bot-card.support {
+            border-color: rgba(88, 101, 242, 0.24);
+        }
+
+        .bot-card.wanderer {
+            border-color: rgba(200, 121, 50, 0.28);
+        }
+
+        .bot-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.65;
+        }
+
+        .bot-card.support::before {
+            background: radial-gradient(circle at top right, rgba(88, 101, 242, 0.13), transparent 46%);
+        }
+
+        .bot-card.wanderer::before {
+            background: radial-gradient(circle at top right, rgba(200, 121, 50, 0.16), transparent 46%);
+        }
+
+        .bot-card>* {
+            position: relative;
+        }
+
+        .bot-label {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: var(--muted);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .bot-card h2 {
+            margin: 0 0 8px;
+            border: 0;
+            padding: 0;
+            font-size: 22px;
+        }
+
+        .bot-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.65;
+            margin: 0 0 14px;
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chip {
+            color: var(--muted);
+            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.035);
+            border-radius: 999px;
+            padding: 7px 10px;
+            font-size: 12px;
+        }
+
+        .section {
+            padding: 30px;
+            margin-bottom: 18px;
+        }
+
+        .section h2 {
+            margin: 0 0 14px;
+            font-size: 20px;
+            letter-spacing: -0.02em;
+            border-left: 3px solid var(--accent);
+            padding-left: 12px;
+        }
+
+        .section h3 {
+            margin: 24px 0 9px;
+            font-size: 15px;
+            color: var(--text);
+        }
+
+        .section p,
+        .section li {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        .section p {
+            margin: 0 0 12px;
+        }
+
+        ul {
+            margin: 10px 0 0;
+            padding-left: 20px;
+        }
+
+        li+li {
+            margin-top: 6px;
+        }
+
+        .notice {
+            border: 1px solid rgba(200, 121, 50, 0.28);
+            background: rgba(200, 121, 50, 0.08);
+            padding: 14px 16px;
+            border-radius: 14px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.65;
+        }
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            color: var(--muted2);
+            font-size: 12px;
+            padding: 22px 4px 8px;
+        }
+
+        @media (hover: hover) {
+
+            .trust-card,
+            .bot-card,
+            .section {
+                transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+            }
+
+            .trust-card:hover,
+            .bot-card:hover {
+                transform: translateY(-2px);
+                border-color: rgba(255, 255, 255, 0.18);
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .main {
+                padding: 30px;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 900px) {
+            .sidebar {
+                display: none;
+            }
+
+            .mobile-topbar {
+                display: flex;
+            }
+
+            .main {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .hero {
+                padding: 28px;
+                border-radius: 20px;
+            }
+
+            .bot-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .main {
+                padding: 14px;
+            }
+
+            .hero {
+                padding: 22px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section,
+            .bot-card {
+                padding: 20px;
+                border-radius: 18px;
+            }
+
+            .mobile-nav.open {
+                grid-template-columns: 1fr;
+            }
+
+            .pill {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .footer {
+                display: block;
+                line-height: 1.7;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- MOBILE TOP BAR -->
-<div class="mobile-topbar">
-  <div class="mobile-brand">
-    <img src="https://cdn.static.diablo.trade/ui/logos/sanctuary.png" />
-    Sanctuary Support
-  </div>
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
-</div>
-
-<!-- MOBILE NAV -->
-<div class="mobile-nav" id="mobileNav">
-  <a href="#overview">Overview</a>
-  <a href="#data">Data</a>
-  <a href="#usage">Usage</a>
-  <a href="#storage">Storage</a>
-  <a href="#rights">Rights</a>
-  <a href="#security">Security</a>
-</div>
-
-<div class="wrapper">
-
-  <!-- SIDEBAR -->
-  <div class="sidebar">
-    <div class="brand">
-      <img src="https://cdn.static.diablo.trade/ui/logos/sanctuary.png" />
-      Sanctuary Support
-    </div>
-    <div class="tag">Privacy & Trust Center</div>
-
-    <div class="nav">
-      <a href="#overview">Overview</a>
-      <a href="#data">Data</a>
-      <a href="#usage">Usage</a>
-      <a href="#storage">Storage</a>
-      <a href="#rights">Rights</a>
-      <a href="#security">Security</a>
-    </div>
-  </div>
-
-  <!-- MAIN -->
-  <div class="main">
-    <div class="container">
-      <div class="glow"></div>
-
-      <div class="card">
-
-        <div class="badge">Privacy Policy</div>
-        <h1>Sanctuary Support</h1>
-        <div class="sub">Moderation & Support System</div>
-
-        <p><strong>Last updated:</strong> June 2026</p>
-
-        <h2 id="overview">Overview</h2>
-        <p>Sanctuary Support is a modmail system used to manage structured communication between users and moderators.</p>
-
-        <h2 id="data">Data We Collect</h2>
-        <ul>
-          <li>Discord User IDs</li>
-          <li>Discord usernames</li>
-          <li>Messages sent to the bot</li>
-          <li>Server roles and membership status</li>
-          <li>Ticket metadata (IDs, timestamps, status)</li>
-        </ul>
-
-        <h2 id="usage">How We Use Data</h2>
-        <p>Data is used only for moderation and support workflows.</p>
-        <p>We do not use data for ads, analytics, profiling, or AI training.</p>
-
-        <h2 id="storage">Data Storage</h2>
-        <p>Stored securely for up to 30 days unless required for moderation cases.</p>
-
-        <h2 id="rights">User Rights</h2>
-        <p>Users may request deletion via moderators or support tickets.</p>
-
-        <h2 id="security">Security</h2>
-        <p>Access is restricted to authorized moderation staff only.</p>
-
-        <div class="footer">
-          Not affiliated with Discord Inc.
+    <div class="mobile-topbar">
+        <div class="mobile-brand">
+            <img src="https://cdn.static.diablo.trade/ui/logos/sanctuary.png" alt="Sanctuary logo" />
+            Sanctuary Trust Center
         </div>
-
-      </div>
+        <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open navigation" aria-expanded="false" id="menuButton">Menu</button>
     </div>
-  </div>
 
-</div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="#overview">Overview</a>
+        <a href="#covered">Covered Apps</a>
+        <a href="#support">Support</a>
+        <a href="#wanderer">Wanderer</a>
+        <a href="#thirdparty">Third Parties</a>
+        <a href="#requests">Data Requests</a>
+        <a href="#security">Security</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<script>
-function toggleMenu() {
-  const nav = document.getElementById("mobileNav");
-  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-}
-</script>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="brand">
+                <img src="https://cdn.static.diablo.trade/ui/logos/sanctuary.png" alt="Sanctuary logo" />
+                <span>Sanctuary Trust Center</span>
+            </div>
+            <div class="tag">Privacy Policy for Sanctuary Discord bots used in Diablo community operations.</div>
+
+            <div class="nav-label">Policy</div>
+            <nav class="nav" aria-label="Page navigation">
+                <a href="#overview">Overview</a>
+                <a href="#covered">Covered Applications</a>
+                <a href="#support">Sanctuary Support</a>
+                <a href="#wanderer">Sanctuary Wanderer</a>
+                <a href="#thirdparty">Third-Party Services</a>
+                <a href="#requests">Data Requests</a>
+                <a href="#security">Security</a>
+                <a href="#updates">Policy Updates</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="sidebar-note">
+                Last updated: June 12, 2026<br />
+                Sanctuary Wanderer does not collect or retain personal user data outside Discord.
+            </div>
+        </aside>
+
+        <main class="main">
+            <div class="container">
+                <section class="hero" id="overview">
+                    <div class="kicker">Privacy Policy</div>
+                    <h1>Sanctuary Discord Bots</h1>
+                    <p>
+                        This Privacy Policy describes how Sanctuary Discord bots operate within the Sanctuary Diablo communities,
+                        including the Diablo IV and Diablo II: Resurrected Discord servers partnered with Blizzard Entertainment.
+                        These bots support moderation, community management, event tracking, and server functionality.
+                    </p>
+                    <div class="meta-row">
+                        <span class="pill">Last updated: June 12, 2026</span>
+                        <span class="pill">No ads</span>
+                        <span class="pill">No selling data</span>
+                        <span class="pill">No AI training</span>
+                    </div>
+                </section>
+
+                <section class="grid" aria-label="Trust commitments">
+                    <div class="trust-card">
+                        <strong>No Advertising Use</strong>
+                        <p>User information is not used for ads, marketing profiles, or behavioral targeting.</p>
+                    </div>
+                    <div class="trust-card">
+                        <strong>No Selling Data</strong>
+                        <p>Sanctuary bots do not sell personal information to third parties.</p>
+                    </div>
+                    <div class="trust-card">
+                        <strong>No AI Training</strong>
+                        <p>Bot data is not used to train AI or machine learning models.</p>
+                    </div>
+                </section>
+
+                <section class="section" id="covered">
+                    <h2>Covered Applications</h2>
+                    <p>This Privacy Policy applies to the following Sanctuary Discord bots.</p>
+
+                    <div class="bot-grid">
+                        <article class="bot-card support">
+                            <span class="bot-label">Moderation and support</span>
+                            <h2>Sanctuary Support</h2>
+                            <p>
+                                A moderation-focused modmail and support system used to facilitate communication between users
+                                and moderation staff.
+                            </p>
+                            <div class="chips">
+                                <span class="chip">Modmail</span>
+                                <span class="chip">Support tickets</span>
+                                <span class="chip">Appeals</span>
+                                <span class="chip">Reports</span>
+                            </div>
+                        </article>
+
+                        <article class="bot-card wanderer">
+                            <span class="bot-label">Community utility</span>
+                            <h2>Sanctuary Wanderer</h2>
+                            <p>
+                                A community utility, automation, moderation assistance, and event-tracking bot used to provide
+                                Diablo-related updates and server functionality.
+                            </p>
+                            <div class="chips">
+                                <span class="chip">Event tracking</span>
+                                <span class="chip">Blizzard updates</span>
+                                <span class="chip">Role automation</span>
+                                <span class="chip">Slash commands</span>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section" id="support">
+                    <h2>Sanctuary Support — Data Usage</h2>
+                    <p>
+                        Sanctuary Support processes user messages submitted directly to the bot for moderation and support purposes.
+                    </p>
+
+                    <h3>Information that may be processed</h3>
+                    <ul>
+                        <li>Direct messages sent to the bot</li>
+                        <li>Ticket conversations between moderators and users</li>
+                        <li>Server membership and role verification</li>
+                        <li>Moderation status checks, such as bans or restrictions</li>
+                        <li>Support history required to resolve tickets</li>
+                    </ul>
+
+                    <h3>How this information is used</h3>
+                    <p>
+                        This information is used strictly for moderation, support operations, appeals, reports, disputes,
+                        rule clarification, bug reports, exploit escalation, and community safety.
+                    </p>
+
+                    <h3>Data retention</h3>
+                    <p>
+                        Support-related data may be temporarily stored for moderation continuity and ticket resolution purposes.
+                        Support data is retained only as reasonably necessary for moderation workflows.
+                    </p>
+
+                    <ul>
+                        <li>Sanctuary Support does not use data for advertising</li>
+                        <li>Sanctuary Support does not profile users</li>
+                        <li>Sanctuary Support does not sell user information</li>
+                        <li>Sanctuary Support does not use data for AI or machine learning training</li>
+                    </ul>
+                </section>
+
+                <section class="section" id="wanderer">
+                    <h2>Sanctuary Wanderer — User Data</h2>
+                    <p>
+                        Sanctuary Wanderer does not collect, store, sell, profile, or retain personal user data outside of Discord.
+                    </p>
+
+                    <h3>Functionality provided</h3>
+                    <ul>
+                        <li>Diablo event tracking, including World Bosses, Helltides, Legions, and similar events</li>
+                        <li>Blizzard update notifications</li>
+                        <li>Role assignment and automation</li>
+                        <li>Community utilities and slash commands</li>
+                        <li>Thread and channel organization</li>
+                        <li>Moderation assistance features</li>
+                    </ul>
+
+                    <h3>Data retention</h3>
+                    <p>
+                        Sanctuary Wanderer does not maintain a database of user messages, user activity history, presence information,
+                        or behavioral profiles.
+                    </p>
+
+                    <ul>
+                        <li>Does not store message content</li>
+                        <li>Does not store user activity history</li>
+                        <li>Does not track user presence</li>
+                        <li>Does not build user profiles</li>
+                        <li>Does not use data for analytics or advertising</li>
+                        <li>Does not sell user information</li>
+                        <li>Does not use data for AI or machine learning training</li>
+                    </ul>
+
+                    <div class="notice">
+                        Any Discord data accessed by Sanctuary Wanderer is used solely to provide requested functionality and is not
+                        retained beyond operational requirements necessary to execute commands or moderation assistance actions.
+                    </div>
+                </section>
+
+                <section class="section" id="thirdparty">
+                    <h2>Third-Party Services</h2>
+                    <p>
+                        The bots may access approved third-party services and APIs to provide functionality, including Diablo-related
+                        event information, Blizzard updates, Ko-Fi supporter verification, and server integrations.
+                    </p>
+                    <p>These services are used solely to provide community features.</p>
+                </section>
+
+                <section class="section" id="requests">
+                    <h2>Data Requests</h2>
+                    <p>
+                        Users who have questions regarding moderation-related data or wish to request deletion of support-related
+                        information may contact the Sanctuary moderation team through Discord or by opening a support request.
+                    </p>
+                    <p>
+                        Because Sanctuary Wanderer does not retain user data off-platform, there may be no persistent user data
+                        available for deletion.
+                    </p>
+                </section>
+
+                <section class="section" id="security">
+                    <h2>Security</h2>
+                    <p>
+                        Reasonable measures are taken to protect operational data used for moderation and support purposes. Access to
+                        support-related information is limited to authorized moderation staff where needed for community operations.
+                    </p>
+                </section>
+
+                <section class="section" id="updates">
+                    <h2>Policy Updates</h2>
+                    <p>
+                        This Privacy Policy may be updated periodically to reflect operational, legal, or platform-related changes.
+                    </p>
+                    <p>
+                        Continued use of Sanctuary Discord services constitutes acceptance of any updates to this policy.
+                    </p>
+                </section>
+
+                <section class="section" id="contact">
+                    <h2>Contact</h2>
+                    <p>
+                        For questions regarding this Privacy Policy, moderation practices, or bot functionality, please contact the
+                        Sanctuary moderation team through Discord.
+                    </p>
+                </section>
+
+                <footer class="footer">
+                    <span>Sanctuary Discord Bots Privacy Policy</span>
+                    <span>Not affiliated with Discord Inc.</span>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("mobileNav");
+            const button = document.getElementById("menuButton");
+            const isOpen = nav.classList.toggle("open");
+            button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            button.textContent = isOpen ? "Close" : "Menu";
+        }
+
+        document.querySelectorAll("#mobileNav a").forEach((link) => {
+            link.addEventListener("click", () => {
+                const nav = document.getElementById("mobileNav");
+                const button = document.getElementById("menuButton");
+                nav.classList.remove("open");
+                button.setAttribute("aria-expanded", "false");
+                button.textContent = "Menu";
+            });
+        });
+    </script>
 
 </body>
+
 </html>
